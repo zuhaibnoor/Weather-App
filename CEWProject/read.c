@@ -39,7 +39,9 @@ int readJSON() {
                 // Extract other fields...
                  // //current
                 cJSON *current = cJSON_GetObjectItemCaseSensitive(json, "current"); 
-                cJSON *temp_c = cJSON_GetObjectItemCaseSensitive(current,"temp_c");
+                
+		cJSON *date = cJSON_GetObjectItemCaseSensitive(current,"last_updated");
+		cJSON *temp_c = cJSON_GetObjectItemCaseSensitive(current,"temp_c");
                 
                  cJSON *temp_f = cJSON_GetObjectItemCaseSensitive(current,"temp_f");
                 cJSON *is_day = cJSON_GetObjectItemCaseSensitive(current,"is_day");
@@ -63,21 +65,22 @@ int readJSON() {
 
 
                 //Writing In File
-                fprintf(f2ptr, "%s\n", name->valuestring);
-                fprintf(f2ptr, "%s\n", region->valuestring);
-                fprintf(f2ptr, "%s\n", country->valuestring);
-                fprintf(f2ptr, "%.2f\n", temp_c->valuedouble);
-                fprintf(f2ptr, "%.2f\n", temp_f->valuedouble);
-                fprintf(f2ptr, "%d\n", is_day->valueint);
-                fprintf(f2ptr, "%s\n", text->valuestring);
-                fprintf(f2ptr, "%s\n", wind_dir->valuestring);
-                fprintf(f2ptr, "%.2f\n", wind_mph->valuedouble);
-                fprintf(f2ptr, "%.2f\n", wind_degree->valuedouble);
-                fprintf(f2ptr, "%.2f\n", precip_in->valuedouble);
-                fprintf(f2ptr, "%.2f\n", humidity->valuedouble);
-                fprintf(f2ptr, "%.2f\n", cloud->valuedouble);
-                fprintf(f2ptr, "%.2f\n", feelslike_c->valuedouble);
-                fprintf(f2ptr, "%.2f\n", uv->valuedouble);
+		fprintf(f2ptr, "Date & Time: %s\n", date->valuestring);
+                fprintf(f2ptr, "City: %s\n", name->valuestring);
+                fprintf(f2ptr, "Region: %s\n", region->valuestring);
+                fprintf(f2ptr, "Country: %s\n", country->valuestring);
+                fprintf(f2ptr, "Temperature(Celsius): %.2f\n", temp_c->valuedouble);
+                fprintf(f2ptr, "Temperature(Fahrenheit): %.2f\n", temp_f->valuedouble);
+//              fprintf(f2ptr, "%d\n", is_day->valueint);
+                fprintf(f2ptr, "Condition: %s\n", text->valuestring);
+                fprintf(f2ptr, "Wind direction: %s\n", wind_dir->valuestring);
+                fprintf(f2ptr, "Wind speed: %.2f mph\n", wind_mph->valuedouble);
+                fprintf(f2ptr, "Wind angle: %.2f\n", wind_degree->valuedouble);
+//              fprintf(f2ptr, "%.2f\n", precip_in->valuedouble);
+                fprintf(f2ptr, "Humidity: %.2f\n", humidity->valuedouble);
+                fprintf(f2ptr, "Cloud Cover: %.2f\n", cloud->valuedouble);
+                fprintf(f2ptr, "Feels like(Celsius): %.2f\n", feelslike_c->valuedouble);
+                fprintf(f2ptr, "UV: %.2f\n", uv->valuedouble);
 
                 
                 // Clean up cJSON object
