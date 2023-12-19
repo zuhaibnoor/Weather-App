@@ -1,4 +1,4 @@
-Date & Time: 2023-12-19 21:30
+Date & Time: 2023-12-19 21:45
 City: Karachi
 Region: Sindh
 Country: Pakistan
@@ -6,7 +6,7 @@ Temperature(Celsius): 20.00
 Temperature(Fahrenheit): 68.00
 Condition: Mist
 Wind direction: NNE
-Wind speed: 5.60 mph
+Wind speed: 9.40 mph
 Wind angle: 30.00
 Humidity: 28.00
 Cloud Cover: 50.00
