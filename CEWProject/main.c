@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "retrieval.c"
-#include "read.c"
+#include "Functions/retrieval.c"
+#include "Functions/read.c"
 
 
 
