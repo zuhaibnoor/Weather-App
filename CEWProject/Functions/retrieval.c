@@ -8,45 +8,7 @@ size_t write_callback(void* contents, size_t size, size_t nmemb, FILE* file) {
     return written;
 }
 
-int rtIp() {
-    CURL *curl;
-    CURLcode res;
 
-    curl_global_init(CURL_GLOBAL_DEFAULT);
-
-    curl = curl_easy_init();
-
-    if (curl) {
-        // Buffer to store the response
-        char response_buffer[4096] = "";
-        FILE *fp = fopen("ip.json", "w");
-
-        curl_easy_setopt(curl, CURLOPT_URL, "https://ipinfo.io/json");
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_callback);
-        curl_easy_setopt(curl, CURLOPT_WRITEDATA, response_buffer);
-        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
-
-        // Set the write callback function
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_callback);
-        // Pass the file pointer to the callback function
-        curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
-
-        // Perform the HTTP request
-        res = curl_easy_perform(curl);
-
-        // Check for errors
-        if (res != CURLE_OK) {
-            fprintf(stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
-        }
-
-        // Cleanup
-        curl_easy_cleanup(curl);
-    }
-
-    curl_global_cleanup();
-
-    return 0;
-}
 
 int ret(cJSON *loc, char *d, char No) {
     //Making Api For Real Time Details Of Weather
