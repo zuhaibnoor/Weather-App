@@ -48,12 +48,14 @@ int rtIp() {
     return 0;
 }
 
-int ret(cJSON *loc, char *d) {
-
+int ret(cJSON *loc, char *d, char No) {
     //Making Api For Real Time Details Of Weather
-
+    char path[20] = "response";
+    char NoStr[2] = {No, '\0'};  // Convert char to string
+    strcat(path, NoStr);
+    strcat(path, ".json");
     cJSON *l = loc; // langitude and latitude
-    const char* AND = "&dt"; // On Date
+    const char* AND = "&dt="; // On Date
     char api[1000]; // To merge with apipre
     const char *apipre = "https://weatherapi-com.p.rapidapi.com/forecast.json?q=";
 
@@ -61,7 +63,6 @@ int ret(cJSON *loc, char *d) {
     strcat(api, l->valuestring); //concat api with location
     strcat(api, AND);
     strcat(api, d);//concat api with date
-
     CURL *hnd = curl_easy_init();
 
     if (!hnd) {
@@ -78,7 +79,7 @@ int ret(cJSON *loc, char *d) {
     curl_easy_setopt(hnd, CURLOPT_HTTPHEADER, headers);
     curl_easy_setopt(hnd, CURLOPT_SSL_VERIFYPEER, 0L);
 
-    FILE *fp = fopen("response.json", "w");
+    FILE *fp = fopen(path, "w");
     if (!fp) {
         fprintf(stderr, "Error opening file for writing\n");
         curl_easy_cleanup(hnd);
