@@ -1,6 +1,55 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../headers/cJSON.h"
+#include <curl/curl.h>
+
+
+
+// cJSON* getLoc() {
+//     FILE *fptr = fopen("ip.json", "r");
+
+//     if (fptr == NULL) {
+//         fprintf(stderr, "Error opening file for reading.\n");
+//         return NULL;
+//     }
+
+//     fseek(fptr, 0, SEEK_END);
+//     long len = ftell(fptr) + 1;
+//     fseek(fptr, 0, SEEK_SET);
+//     printf("%ld", len);
+//     char *buffer = malloc(len);
+    
+//     if (buffer == NULL) {
+//         fprintf(stderr, "Memory allocation error.\n");
+//         fclose(fptr);
+//         return NULL;
+//     }
+
+//     int bytesRead = fread(buffer, 1, len, fptr);
+    
+//     if (bytesRead != len) {
+//         fprintf(stderr, "Error reading file. Read %zu bytes, expected %ld bytes.\n", bytesRead, len);
+//         fclose(fptr);
+//         free(buffer);
+//         return NULL;
+//     }
+
+//     buffer[len] = '\0';
+//     fclose(fptr);
+
+//     cJSON *json_parse = cJSON_Parse(buffer);
+
+//     if (json_parse == NULL) {
+//         fprintf(stderr, "Error parsing JSON: %s\n", cJSON_GetErrorPtr());
+//         free(buffer);
+//         return NULL;
+//     }
+
+//     cJSON *loc = cJSON_GetObjectItemCaseSensitive(json_parse, "loc");
+//    free(buffer);
+
+//     return loc;
+// }
 
 int readJSON() {
     FILE *fptr = fopen("response.json", "r");
