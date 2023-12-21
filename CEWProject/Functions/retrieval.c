@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <curl/curl.h>
+#include "../headers/cJSON.h"
 
 
 size_t write_callback(void* contents, size_t size, size_t nmemb, FILE* file) {

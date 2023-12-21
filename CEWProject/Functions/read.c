@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../headers/cJSON.c"
+#include "../headers/cJSON.h"
 
 int readJSON() {
     FILE *fptr = fopen("response.json", "r");
