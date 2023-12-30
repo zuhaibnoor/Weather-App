@@ -1,0 +1,82 @@
+--------------------- 2023-12-21 -------------------
+City: Karachi
+Country: Pakistan
+Date: 2023-12-21
+Condition: 
+Temperature: 22.000000
+Max Temperature: 11.900000
+Min Temperature: 19.200000
+Max Wind: 0.000000
+Min Wind: 0.000000
+Avg Humidity: 24.000000
+Avg Temperature: 22.300000
+Chance of Rain: 0.000000
+UV: 6.000000
+Sunset: 05:48 PM
+Sunrise: 07:12 AM
+Moonrise: 01:33 PM
+Moonset: 01:30 AM
+--------------------- NIGHT 2023-12-21 01:00 -------------------
+Night[0] Time: 2023-12-21 01:00
+Night[0] is_day: 0
+Night[0] condition: Clear
+Night[0] Wind: 11.500000
+Night[0] Humidity: 26.000000
+Night[0] Heat Index: 21.000000
+Night[0] Chance of Rain: 0.000000
+Night[0] UV: 1.000000
+--------------------- NIGHT 2023-12-21 05:00 -------------------
+Night[1] Time: 2023-12-21 05:00
+Night[1] is_day: 0
+Night[1] condition: Clear
+Night[1] Wind: 11.500000
+Night[1] Humidity: 25.000000
+Night[1] Heat Index: 19.600000
+Night[1] Chance of Rain: 0.000000
+Night[1] UV: 1.000000
+--------------------- DAY 2023-12-21 09:00 -------------------
+Day[0] Time: 2023-12-21 09:00
+Day[0] Condition: Sunny
+Day[0] is_day: 1
+Day[0] Wind: 10.100000
+Day[0] Humidity: 22.000000
+Day[0] Heat Index: 22.000000
+Day[0] Chance of Rain: 0.000000
+Day[0] UV: 6.000000
+--------------------- DAY 2023-12-21 13:00 -------------------
+Day[1] Time: 2023-12-21 13:00
+Day[1] Condition: Partly cloudy
+Day[1] is_day: 1
+Day[1] Wind: 3.600000
+Day[1] Humidity: 16.000000
+Day[1] Heat Index: 23.900000
+Day[1] Chance of Rain: 0.000000
+Day[1] UV: 7.000000
+--------------------- 2023-12-22 -------------------
+Date: 2023-12-22
+Condition: 
+Temperature: 22.000000
+Max Temperature: 15.800000
+Min Temperature: 21.500000
+Avg Humidity: 32.000000
+Avg Temperature: 23.200000
+Chance of Rain: 0.000000
+UV: 6.000000
+Sunset: 05:48 PM
+Sunrise: 07:12 AM
+Moonrise: 02:08 PM
+Moonset: 02:30 AM
+--------------------- 2023-12-23 -------------------
+Date: 2023-12-23
+Condition: 
+Temperature: 22.000000
+Max Temperature: 22.000000
+Min Temperature: 19.900000
+Avg Humidity: 38.000000
+Avg Temperature: 23.300000
+Chance of Rain: 0.000000
+UV: 6.000000
+Sunset: 05:49 PM
+Sunrise: 07:13 AM
+Moonrise: 02:46 PM
+Moonset: 03:31 AM

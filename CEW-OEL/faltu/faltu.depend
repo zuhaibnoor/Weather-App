@@ -1,0 +1,173 @@
+# depslib dependency file v1.0
+1702717755 source:e:\bootstrap\faltu\main.c
+	<stdio.h>
+	<curl/curl.h>
+
+1701788261 e:\bootstrap\faltu\curl\curl.h
+	"curlver.h"
+	"system.h"
+	<stdio.h>
+	<limits.h>
+	<sys/param.h>
+	<sys/types.h>
+	<time.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<sys/select.h>
+	<sys/socket.h>
+	<sys/time.h>
+	"easy.h"
+	"multi.h"
+	"urlapi.h"
+	"options.h"
+	"header.h"
+	"websockets.h"
+	"mprintf.h"
+	"typecheck-gcc.h"
+
+1701846910 e:\bootstrap\faltu\curl\curlver.h
+
+1701788261 e:\bootstrap\faltu\curl\system.h
+	<ConditionalMacros.h>
+	<inttypes.h>
+	<inttypes.h>
+	<winsock2.h>
+	<windows.h>
+	<ws2tcpip.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/poll.h>
+
+1701006578 e:\bootstrap\faltu\curl\easy.h
+
+1701006578 e:\bootstrap\faltu\curl\multi.h
+	"curl.h"
+
+1701339061 e:\bootstrap\faltu\curl\urlapi.h
+	"curl.h"
+
+1700232304 e:\bootstrap\faltu\curl\options.h
+
+1700232304 e:\bootstrap\faltu\curl\header.h
+
+1701006578 e:\bootstrap\faltu\curl\websockets.h
+
+1701006578 e:\bootstrap\faltu\curl\mprintf.h
+	<stdarg.h>
+	<stdio.h>
+	"curl.h"
+
+1701006578 e:\bootstrap\faltu\curl\typecheck-gcc.h
+
+1701788261 e:\bootstrap\faltu\curl-8.5.0\include\curl\curl.h
+	"curlver.h"
+	"system.h"
+	<stdio.h>
+	<limits.h>
+	<sys/param.h>
+	<sys/types.h>
+	<time.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<sys/select.h>
+	<sys/socket.h>
+	<sys/time.h>
+	"easy.h"
+	"multi.h"
+	"urlapi.h"
+	"options.h"
+	"header.h"
+	"websockets.h"
+	"mprintf.h"
+	"typecheck-gcc.h"
+
+1701846910 e:\bootstrap\faltu\curl-8.5.0\include\curl\curlver.h
+
+1701788261 e:\bootstrap\faltu\curl-8.5.0\include\curl\system.h
+	<ConditionalMacros.h>
+	<inttypes.h>
+	<inttypes.h>
+	<winsock2.h>
+	<windows.h>
+	<ws2tcpip.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/poll.h>
+
+1701006578 e:\bootstrap\faltu\curl-8.5.0\include\curl\easy.h
+
+1701006578 e:\bootstrap\faltu\curl-8.5.0\include\curl\multi.h
+	"curl.h"
+
+1701339061 e:\bootstrap\faltu\curl-8.5.0\include\curl\urlapi.h
+	"curl.h"
+
+1700232304 e:\bootstrap\faltu\curl-8.5.0\include\curl\options.h
+
+1700232304 e:\bootstrap\faltu\curl-8.5.0\include\curl\header.h
+
+1701006578 e:\bootstrap\faltu\curl-8.5.0\include\curl\websockets.h
+
+1701006578 e:\bootstrap\faltu\curl-8.5.0\include\curl\mprintf.h
+	<stdarg.h>
+	<stdio.h>
+	"curl.h"
+
+1701006578 e:\bootstrap\faltu\curl-8.5.0\include\curl\typecheck-gcc.h
+
+1702563605 e:\bootstrap\faltu\curl-master\curl-master\include\curl\curl.h
+	"curlver.h"
+	"system.h"
+	<stdio.h>
+	<limits.h>
+	<sys/param.h>
+	<sys/types.h>
+	<time.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<sys/select.h>
+	<sys/socket.h>
+	<sys/time.h>
+	"easy.h"
+	"multi.h"
+	"urlapi.h"
+	"options.h"
+	"header.h"
+	"websockets.h"
+	"mprintf.h"
+	"typecheck-gcc.h"
+
+1702563605 e:\bootstrap\faltu\curl-master\curl-master\include\curl\curlver.h
+
+1702563605 e:\bootstrap\faltu\curl-master\curl-master\include\curl\system.h
+	<ConditionalMacros.h>
+	<inttypes.h>
+	<inttypes.h>
+	<winsock2.h>
+	<windows.h>
+	<ws2tcpip.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/poll.h>
+
+1702563605 e:\bootstrap\faltu\curl-master\curl-master\include\curl\easy.h
+
+1702563605 e:\bootstrap\faltu\curl-master\curl-master\include\curl\multi.h
+	"curl.h"
+
+1702563605 e:\bootstrap\faltu\curl-master\curl-master\include\curl\urlapi.h
+	"curl.h"
+
+1702563605 e:\bootstrap\faltu\curl-master\curl-master\include\curl\options.h
+
+1702563605 e:\bootstrap\faltu\curl-master\curl-master\include\curl\header.h
+
+1702563605 e:\bootstrap\faltu\curl-master\curl-master\include\curl\websockets.h
+
+1702563605 e:\bootstrap\faltu\curl-master\curl-master\include\curl\mprintf.h
+	<stdarg.h>
+	<stdio.h>
+	"curl.h"
+
+1702563605 e:\bootstrap\faltu\curl-master\curl-master\include\curl\typecheck-gcc.h
+
