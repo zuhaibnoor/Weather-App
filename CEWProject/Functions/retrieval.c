@@ -33,7 +33,7 @@ int ret(cJSON *loc, char *d, char No) {
     }
 
     curl_easy_setopt(hnd, CURLOPT_CUSTOMREQUEST, "GET");
-    curl_easy_setopt(hnd, CURLOPT_URL, api);
+    curl_easy_setopt(hnd, CURLOPT_URL, api);//API CALL
 
     struct curl_slist *headers = NULL;
     headers = curl_slist_append(headers, "X-RapidAPI-Key: dcd065dca6mshe67c6396d12f665p138055jsn532617cef63a");
