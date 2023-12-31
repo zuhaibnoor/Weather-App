@@ -22,7 +22,10 @@ int main() {
         incrementDate(date);
         ret(loc, date, THIRD_LOCATION);
         cJSON_Delete(json_parse);
+        Read();
     }
+
+    printf("DONE");
 
     return 0;
 }

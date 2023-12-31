@@ -2,6 +2,7 @@
 #include <time.h>
 
 
+
 void incrementDate(char* date) {
     struct tm tm_date = {0}; // Initialize struct tm with zeros
 
@@ -13,8 +14,11 @@ void incrementDate(char* date) {
     // Increment the day by 1
     tm_date.tm_mday++;
 
+    // Use mktime to normalize the date
+    mktime(&tm_date);
+
     // Convert struct tm back to string
-    strftime(date, 11, "%Y-%m-%d", &tm_date);
+    strftime(date, 12, "%Y-%m-%d", &tm_date);
 }
 
 char* getDate()
