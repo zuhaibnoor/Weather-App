@@ -1,0 +1,1 @@
+gcc headers/cJSON.c Functions/read.c Functions/retrieval.c Functions/ip_utils.c Functions/date_utils.c main.c -o run -lcurl

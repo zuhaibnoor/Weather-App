@@ -73,6 +73,24 @@ void Analyze(Days* d)
     double Rain_analysis = average(avgRain); 
     double Wind_analysis = average(avgWind);
 
+    FILE *file = fopen("analysis.txt", "w");
+
+    // Check if the file is opened successfully
+    if (file == NULL) {
+        fprintf(stderr, "Error opening file.\n");
+        return;
+    }
+    fprintf(file, "Final report. (Based on analysis of weather data for three days.)\n");
+    fprintf(file, "Temperature Analysis: %.2f\n", temp_analysis);
+    fprintf(file, "Humidity Analysis: %.2f\n", humidity_analysis);
+    fprintf(file, "UV Analysis: %.2f\n", UV_analysis);
+    fprintf(file, "Rain Analysis: %.2f\n", Rain_analysis);
+    fprintf(file, "Wind Analysis: %.2f\n", Wind_analysis);
+
+    // Close the file
+    fclose(file);
+
+
     // Get the current time in seconds since the epoch
     time_t currentTime = time(NULL);
 
@@ -162,48 +180,48 @@ void Analyze(Days* d)
 }
 
 
-void display(Days* d)
-{
-    for (int i = 0; i < 3; i++)
-    {
-        Days_Forecast* N = d[i].Night;
-        Days_Forecast* D = d[i].Day;
+// void display(Days* d)
+// {
+//     for (int i = 0; i < 3; i++)
+//     {
+//         Days_Forecast* N = d[i].Night;
+//         Days_Forecast* D = d[i].Day;
 
-        printf("%s\n", d[i].city);
-        printf("%s\n", d[i].country);
-        printf("%s\n", d[i].date);
-        printf("%s\n", d[i].condition);
-        printf("%f\n", d[i].temp);
-        printf("%f\n", d[i].maxTemp);
-        printf("%f\n", d[i].minTemp);
-        printf("%f\n", d[i].maxWind);
-        printf("%f\n", d[i].minWind);
-        printf("%f\n", d[i].avgHumidity);
-        printf("%f\n", d[i].avgTemp);
-        printf("%f\n", d[i].chanceOfRain);
-        printf("%f\n", d[i].UV);
-        printf("%s\n", d[i].sunset);
-        printf("%s\n", d[i].sunrise);
-        printf("%s\n", d[i].moonrise);
-        printf("%s\n", d[i].moonset);
-        for (int j = 0; j<2; j++) {
-            printf("%s\n", N[j].time);
-            printf("DAY %s\n", D[j].time);
-            printf("%s\n", N[j].condition);
-            printf("%s\n", D[j].condition);
-            printf("%f\n", N[j].windKph);
-            printf("%f\n", D[j].windKph);
-            printf("%f\n", D[j].humidity);
-            printf("%f\n", N[j].humidity);
-            printf("%f\n", N[j].heatIndex_C);
-            printf("%f\n", D[j].heatIndex_C);
-            printf("%f\n", D[j].chance_of_rain);
-            printf("%f\n", N[j].chance_of_rain);
-            printf("%f\n", N[j].UV);
-            printf("%f\n", D[j].UV);
-    }
-}
-}
+//         printf("%s\n", d[i].city);
+//         printf("%s\n", d[i].country);
+//         printf("%s\n", d[i].date);
+//         printf("%s\n", d[i].condition);
+//         printf("%f\n", d[i].temp);
+//         printf("%f\n", d[i].maxTemp);
+//         printf("%f\n", d[i].minTemp);
+//         printf("%f\n", d[i].maxWind);
+//         printf("%f\n", d[i].minWind);
+//         printf("%f\n", d[i].avgHumidity);
+//         printf("%f\n", d[i].avgTemp);
+//         printf("%f\n", d[i].chanceOfRain);
+//         printf("%f\n", d[i].UV);
+//         printf("%s\n", d[i].sunset);
+//         printf("%s\n", d[i].sunrise);
+//         printf("%s\n", d[i].moonrise);
+//         printf("%s\n", d[i].moonset);
+//         for (int j = 0; j<2; j++) {
+//             printf("%s\n", N[j].time);
+//             printf("DAY %s\n", D[j].time);
+//             printf("%s\n", N[j].condition);
+//             printf("%s\n", D[j].condition);
+//             printf("%f\n", N[j].windKph);
+//             printf("%f\n", D[j].windKph);
+//             printf("%f\n", D[j].humidity);
+//             printf("%f\n", N[j].humidity);
+//             printf("%f\n", N[j].heatIndex_C);
+//             printf("%f\n", D[j].heatIndex_C);
+//             printf("%f\n", D[j].chance_of_rain);
+//             printf("%f\n", N[j].chance_of_rain);
+//             printf("%f\n", N[j].UV);
+//             printf("%f\n", D[j].UV);
+//     }
+// }
+// }
 
 void writeTxt(Days *d) {
     FILE *fptr = fopen("display.txt", "w");
@@ -357,18 +375,18 @@ Days* parseJSON() {
             cJSON *min_temp = cJSON_GetObjectItemCaseSensitive(day,"mintemp_c");
             cJSON *avgtemp_c = cJSON_GetObjectItemCaseSensitive(day,"avgtemp_c");
             cJSON *max_wind = cJSON_GetObjectItemCaseSensitive(day,"maxwind_kph");
-           // cJSON *min_wind = cJSON_GetObjectItemCaseSensitive(day,"minwind_kph");
+          
             cJSON *avghumidity = cJSON_GetObjectItemCaseSensitive(day,"avghumidity");
             cJSON *daily_chance_of_rain = cJSON_GetObjectItemCaseSensitive(day,"daily_chance_of_rain");
             cJSON *uv = cJSON_GetObjectItemCaseSensitive(day,"uv");
-            // printf("%d\n", avgtemp_c->valueint);
+          
             cJSON *sunrise = cJSON_GetObjectItemCaseSensitive(astro,"sunrise");
             cJSON *moonrise = cJSON_GetObjectItemCaseSensitive(astro,"moonrise");
             cJSON *sunset = cJSON_GetObjectItemCaseSensitive(astro,"sunset");
             cJSON *moonset = cJSON_GetObjectItemCaseSensitive(astro,"moonset");
             cJSON *hour = cJSON_GetObjectItemCaseSensitive(FC,"hour");
-            printf(" Parse1: %lf\n", max_wind->valuedouble);
-          //  printf(" Parse2: %lf\n", min_wind->valuedouble);
+            
+          
 
             strncpy(d[i-1].city, name->valuestring, sizeof(d[i-1].city) - 1);
             d[i-1].city[sizeof(d[i-1].city) - 1] = '\0';  // Ensure null-terminated string
@@ -399,7 +417,11 @@ Days* parseJSON() {
             
            //printf("%s %d", d[i-1].moonset, d[i-1].chanceOfRain);
             int N = 0,D = 0;
-            for (int j = 1; j <= 16; j += 4) {
+
+            for (int j = 0; j < 19; j += 6) {
+                if (j == 18){
+                    j-=1;
+                }
                 cJSON *ite = cJSON_GetArrayItem(hour, j);
                 if (ite != NULL) {
                     cJSON *t = cJSON_GetObjectItemCaseSensitive(ite, "time");
@@ -413,7 +435,7 @@ Days* parseJSON() {
                     cJSON *cr = cJSON_GetObjectItemCaseSensitive(ite, "chance_of_snow");
                     cJSON *ul_v = cJSON_GetObjectItemCaseSensitive(ite, "uv");
 
-                    printf("day: %d is_day:%d\n",i+1, is_day->valueint);
+                    
                     if (is_day->valueint == 0)
                     {
                         Days_Forecast *p = d[i-1].Night;

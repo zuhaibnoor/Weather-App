@@ -1,0 +1,6 @@
+Final report. (Based on analysis of weather data for three days.)
+Temperature Analysis: 21.00
+Humidity Analysis: 38.00
+UV Analysis: 4.00
+Rain Analysis: 0.00
+Wind Analysis: 21.00
