@@ -55,8 +55,9 @@ double average(double* arr)
 }
 
 
-void Analyze(Days* d)
+int Analyze(Days* d)
 {
+    int Return_Value;
     Days d1 = d[0];
     Days d2 = d[1];
     Days d3 = d[2];
@@ -78,7 +79,7 @@ void Analyze(Days* d)
     // Check if the file is opened successfully
     if (file == NULL) {
         fprintf(stderr, "Error opening file.\n");
-        return;
+        return -1;
     }
     fprintf(file, "Final report. (Based on analysis of weather data for three days.)\n");
     fprintf(file, "Temperature Analysis: %.2f\n", temp_analysis);
@@ -97,7 +98,7 @@ void Analyze(Days* d)
     // Check if the time retrieval was successful
     if (currentTime == -1) {
         perror("Unable to get time");
-        return;
+        return -1;
     }
 
     // Convert the time to a structure representing the broken-down time
@@ -106,28 +107,31 @@ void Analyze(Days* d)
     // Check if the conversion was successful
     if (localTimeInfo == NULL) {
         perror("Unable to convert time");
-        return;
+        return -1;
     }
     
     char *TIME = asctime(localTimeInfo);
 
 
     
-
+	
     FILE* fptr = fopen("Anamoly.log", "w");
     FILE *fptr2 = fopen("history.log", "a");
     
     if(fptr != NULL && fptr2 != NULL)
     {
+    	Return_Value = 0;
         if ((int)temp_analysis > 40)
         {
             fprintf(fptr, "Warning: Temperature Too High!! %s",TIME);
             fprintf(fptr2, "Warning: Temperature Too High!! %s",TIME);
+            Return_Value = 1;
         } else if ((int)temp_analysis < 10)
         {
             fprintf(fptr, "Warning: Temperature Too Low!! %s",TIME);
             
             fprintf(fptr2, "Warning: Temperature Too Low!! %s",TIME);
+            Return_Value = 1;
             
         }
 
@@ -136,12 +140,14 @@ void Analyze(Days* d)
             fprintf(fptr, "Warning: High Moisture!! %s",TIME);
             
             fprintf(fptr2, "Warning: High Moisture!! %s",TIME);
+            Return_Value = 1;
             
         } else if ((int)humidity_analysis <= 55)
         {
             fprintf(fptr, "Warning: Low Moisture!! %s",TIME);
             
             fprintf(fptr2, "Warning: Low Moisture!! %s",TIME);
+            Return_Value = 1;
             
         }
         if ((int)UV_analysis >= 8)
@@ -149,6 +155,7 @@ void Analyze(Days* d)
             fprintf(fptr, "Warning: Avoid being outside during midday hours! Make sure you seek shade! Shirt, sunscreen and hat are a must! %s",TIME);
             
             fprintf(fptr2, "Warning: Avoid being outside during midday hours! Make sure you seek shade! Shirt, sunscreen and hat are a must! %s",TIME);
+            Return_Value = 1;
             
         } 
         if (Rain_analysis >= 0.7 && Wind_analysis >= 93)
@@ -156,6 +163,7 @@ void Analyze(Days* d)
             fprintf(fptr, "Warning: Thunderstorm!! %s" ,TIME);
             
             fprintf(fptr2, "Warning: Thunderstorm!! %s",TIME);
+            Return_Value = 1;
             
         }
 
@@ -164,6 +172,7 @@ void Analyze(Days* d)
             fprintf(fptr, "Warning: Wind Gust!! %s",TIME);
             
             fprintf(fptr2, "Warning: Wind Gust!! %s",TIME);
+            Return_Value = 1;
             
         }
 
@@ -172,11 +181,9 @@ void Analyze(Days* d)
     fclose(fptr2);
     
 
+    return Return_Value;
     
-    
-    
-    
-    
+   
 }
 
 
@@ -484,14 +491,19 @@ Days* parseJSON() {
     return d;
     
 }
-
-void Read()
-{
-    
-   Days* d = parseJSON();
-    //display(d);
+int Read() {
+    Days* d = parseJSON();
+    if (d == NULL) {
+        // Handle the error, e.g., print an error message
+        fprintf(stderr, "Error parsing JSON data.\n");
+        return -1;
+    }
     writeTxt(d);
-    Analyze(d);
+    int res = Analyze(d);
     
+ 
     free(d);
+    return res;
 }
+
+
