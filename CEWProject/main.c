@@ -13,23 +13,21 @@ enum Locations {
 };
 
 int main() {
-    cJSON *json_parse = retIp();    // Function in ip_utils.c to get latitude and longitude for a dynamic weather application
-    char* date = getDate();         // Trying To Get Today's Date Function In date_utils.c
+    
+        char* date = getDate();         // Trying To Get Today's Date Function In date_utils.c
 
-    if (json_parse != NULL) {
-        cJSON *loc = cJSON_GetObjectItemCaseSensitive(json_parse, "loc");
-        ret(loc, date, FIRST_LOCATION);  // Function in retrieval.c
+    
+        ret(date, FIRST_LOCATION);  // Function in retrieval.c
         incrementDate(date);
-        ret(loc, date, SECOND_LOCATION);
+        ret(date, SECOND_LOCATION);
         incrementDate(date);
-        ret(loc, date, THIRD_LOCATION);
-        cJSON_Delete(json_parse);
+        ret(date, THIRD_LOCATION);
+    
         Read();
         printFileContents("display.txt");
         printFileContents("analysis.txt");
-    }
 
-    printf("DONE");
+        printf("DONE");
 
     return 0;
 }

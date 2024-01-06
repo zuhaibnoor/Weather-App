@@ -2,11 +2,11 @@
 City: Karachi
 Country: Pakistan
 Date: 2024-01-06
-Condition: Sunny
-Temperature: 24.000000
-Max Temperature: 24.600000
+Condition: Clear
+Temperature: 18.000000
+Max Temperature: 24.700000
 Min Temperature: 17.800000
-Max Wind: 23.000000
+Max Wind: 21.200000
 Avg Humidity: 40.000000
 Avg Temperature: 21.100000
 Chance of Rain: 0.000000
@@ -53,9 +53,9 @@ Day[1] Chance of Rain: 0.000000
 Day[1] UV: 6.000000
 --------------------- 2024-01-07 -------------------
 Date: 2024-01-07
-Condition: Sunny
-Temperature: 24.000000
-Max Temperature: 25.300000
+Condition: Clear
+Temperature: 18.000000
+Max Temperature: 25.400000
 Min Temperature: 18.800000
 Avg Humidity: 35.000000
 Avg Temperature: 21.700000
@@ -67,12 +67,12 @@ Moonrise: 03:03 AM
 Moonset: 02:05 PM
 --------------------- 2024-01-08 -------------------
 Date: 2024-01-08
-Condition: Mist
-Temperature: 24.000000
-Max Temperature: 24.800000
+Condition: Clear
+Temperature: 18.000000
+Max Temperature: 24.300000
 Min Temperature: 18.900000
-Avg Humidity: 39.000000
-Avg Temperature: 21.600000
+Avg Humidity: 41.000000
+Avg Temperature: 21.400000
 Chance of Rain: 0.000000
 UV: 4.000000
 Sunset: 05:59 PM

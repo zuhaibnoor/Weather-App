@@ -45,7 +45,7 @@ typedef struct {
     Days_Forecast Day[2];
 } Days;
 size_t write_callback(void* contents, size_t size, size_t nmemb, FILE* file);
-int ret(cJSON *loc, char *d, char No);
+int ret(char *d, char No);
 double average(double* arr);
 void Analyze(Days* d);
 void display(Days* d);
@@ -54,7 +54,7 @@ Days* parseJSON();
 void Read();
 size_t wrtclb(void *contents, size_t size, size_t nmemb, void *userp);
 
-cJSON* retIp();
+//cJSON* retIp();
 
 void incrementDate(char* date);
 char* getDate();

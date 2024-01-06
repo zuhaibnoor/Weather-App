@@ -10,19 +10,19 @@ size_t write_callback(void* contents, size_t size, size_t nmemb, FILE* file) {
 
 
 
-int ret(cJSON *loc, char *d, char No) {
+int ret(char *d, char No) {
     //Making Api For Real Time Details Of Weather
     char path[20] = "response";
     char NoStr[2] = {No, '\0'};  // Convert char to string
     strcat(path, NoStr);
     strcat(path, ".json");
-    cJSON *l = loc; // langitude and latitude
+    //cJSON *l = loc; // langitude and latitude
     const char* AND = "&dt="; // On Date
     char api[1000]; // To merge with apipre
-    const char *apipre = "https://weatherapi-com.p.rapidapi.com/forecast.json?q=";
+    const char *apipre = "https://weatherapi-com.p.rapidapi.com/forecast.json?q=Karachi";
 
     strcpy(api, apipre); // Initialize the array with the prefix
-    strcat(api, l->valuestring); //concat api with location
+    //strcat(api, l->valuestring); //concat api with location
     strcat(api, AND);
     strcat(api, d);//concat api with date
     CURL *hnd = curl_easy_init();
