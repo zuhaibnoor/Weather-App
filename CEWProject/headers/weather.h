@@ -47,11 +47,11 @@ typedef struct {
 size_t write_callback(void* contents, size_t size, size_t nmemb, FILE* file);
 int ret(char *d, char No);
 double average(double* arr);
-void Analyze(Days* d);
+int Analyze(Days* d);
 void display(Days* d);
 void writeTxt(Days* d);
 Days* parseJSON();
-void Read();
+int Read();
 size_t wrtclb(void *contents, size_t size, size_t nmemb, void *userp);
 
 //cJSON* retIp();
