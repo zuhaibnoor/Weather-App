@@ -2,7 +2,7 @@
 City: Karachi
 Country: Pakistan
 Date: 2024-01-06
-Condition: Mist
+Condition: Sunny
 Temperature: 24.000000
 Max Temperature: 24.600000
 Min Temperature: 17.800000
@@ -15,45 +15,45 @@ Sunset: 05:57 PM
 Sunrise: 07:18 AM
 Moonrise: 02:06 AM
 Moonset: 01:27 PM
---------------------- NIGHT 2024-01-06 01:00 -------------------
-Night[0] Time: 2024-01-06 01:00
+--------------------- NIGHT 2024-01-06 00:00 -------------------
+Night[0] Time: 2024-01-06 00:00
 Night[0] is_day: 0
 Night[0] condition: Clear
-Night[0] Wind: 14.400000
-Night[0] Humidity: 33.000000
-Night[0] Heat Index: 19.800000
+Night[0] Wind: 12.600000
+Night[0] Humidity: 35.000000
+Night[0] Heat Index: 20.300000
 Night[0] Chance of Rain: 0.000000
 Night[0] UV: 1.000000
---------------------- NIGHT 2024-01-06 05:00 -------------------
-Night[1] Time: 2024-01-06 05:00
+--------------------- NIGHT 2024-01-06 06:00 -------------------
+Night[1] Time: 2024-01-06 06:00
 Night[1] is_day: 0
 Night[1] condition: Clear
-Night[1] Wind: 17.300000
-Night[1] Humidity: 41.000000
-Night[1] Heat Index: 18.200000
+Night[1] Wind: 16.200000
+Night[1] Humidity: 42.000000
+Night[1] Heat Index: 18.000000
 Night[1] Chance of Rain: 0.000000
 Night[1] UV: 1.000000
---------------------- DAY 2024-01-06 09:00 -------------------
-Day[0] Time: 2024-01-06 09:00
+--------------------- DAY 2024-01-06 12:00 -------------------
+Day[0] Time: 2024-01-06 12:00
 Day[0] Condition: Sunny
 Day[0] is_day: 1
-Day[0] Wind: 19.400000
-Day[0] Humidity: 39.000000
-Day[0] Heat Index: 19.300000
+Day[0] Wind: 21.200000
+Day[0] Humidity: 38.000000
+Day[0] Heat Index: 24.300000
 Day[0] Chance of Rain: 0.000000
-Day[0] UV: 5.000000
---------------------- DAY 2024-01-06 13:00 -------------------
-Day[1] Time: 2024-01-06 13:00
+Day[0] UV: 6.000000
+--------------------- DAY 2024-01-06 17:00 -------------------
+Day[1] Time: 2024-01-06 17:00
 Day[1] Condition: Sunny
 Day[1] is_day: 1
-Day[1] Wind: 20.900000
-Day[1] Humidity: 38.000000
-Day[1] Heat Index: 24.600000
+Day[1] Wind: 14.000000
+Day[1] Humidity: 39.000000
+Day[1] Heat Index: 24.900000
 Day[1] Chance of Rain: 0.000000
 Day[1] UV: 6.000000
 --------------------- 2024-01-07 -------------------
 Date: 2024-01-07
-Condition: Mist
+Condition: Sunny
 Temperature: 24.000000
 Max Temperature: 25.300000
 Min Temperature: 18.800000

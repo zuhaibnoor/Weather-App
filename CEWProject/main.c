@@ -4,6 +4,7 @@
 //#include "Functions/date_utils.c"
 //#include "Functions/ip_utils.c"
 #include "headers/weather.h"
+#include "Functions/report.c"
 
 enum Locations {
     FIRST_LOCATION  = '1',
@@ -24,6 +25,8 @@ int main() {
         ret(loc, date, THIRD_LOCATION);
         cJSON_Delete(json_parse);
         Read();
+        printFileContents("display.txt");
+        printFileContents("analysis.txt");
     }
 
     printf("DONE");
