@@ -1,81 +1,81 @@
---------------------- 2024-01-01 -------------------
+--------------------- 2024-01-06 -------------------
 City: Karachi
 Country: Pakistan
-Date: 2024-01-01
-Condition: Clear
-Temperature: 21.600000
-Max Temperature: 25.500000
-Min Temperature: 19.300000
-Max Wind: 14.000000
-Avg Humidity: 37.000000
-Avg Temperature: 22.000000
+Date: 2024-01-06
+Condition: Mist
+Temperature: 24.000000
+Max Temperature: 24.600000
+Min Temperature: 17.800000
+Max Wind: 23.000000
+Avg Humidity: 40.000000
+Avg Temperature: 21.100000
 Chance of Rain: 0.000000
-UV: 6.000000
-Sunset: 05:54 PM
-Sunrise: 07:17 AM
-Moonrise: 10:41 PM
-Moonset: 10:58 AM
---------------------- NIGHT 2024-01-01 01:00 -------------------
-Night[0] Time: 2024-01-01 01:00
+UV: 4.000000
+Sunset: 05:57 PM
+Sunrise: 07:18 AM
+Moonrise: 02:06 AM
+Moonset: 01:27 PM
+--------------------- NIGHT 2024-01-06 01:00 -------------------
+Night[0] Time: 2024-01-06 01:00
 Night[0] is_day: 0
 Night[0] condition: Clear
-Night[0] Wind: 11.500000
-Night[0] Humidity: 32.000000
-Night[0] Heat Index: 20.700000
+Night[0] Wind: 14.400000
+Night[0] Humidity: 33.000000
+Night[0] Heat Index: 19.800000
 Night[0] Chance of Rain: 0.000000
 Night[0] UV: 1.000000
---------------------- NIGHT 2024-01-01 05:00 -------------------
-Night[1] Time: 2024-01-01 05:00
+--------------------- NIGHT 2024-01-06 05:00 -------------------
+Night[1] Time: 2024-01-06 05:00
 Night[1] is_day: 0
 Night[1] condition: Clear
-Night[1] Wind: 12.600000
-Night[1] Humidity: 32.000000
-Night[1] Heat Index: 19.700000
+Night[1] Wind: 17.300000
+Night[1] Humidity: 41.000000
+Night[1] Heat Index: 18.200000
 Night[1] Chance of Rain: 0.000000
 Night[1] UV: 1.000000
---------------------- DAY 2024-01-01 09:00 -------------------
-Day[0] Time: 2024-01-01 09:00
+--------------------- DAY 2024-01-06 09:00 -------------------
+Day[0] Time: 2024-01-06 09:00
 Day[0] Condition: Sunny
 Day[0] is_day: 1
-Day[0] Wind: 11.500000
-Day[0] Humidity: 31.000000
-Day[0] Heat Index: 23.100000
+Day[0] Wind: 19.400000
+Day[0] Humidity: 39.000000
+Day[0] Heat Index: 19.300000
 Day[0] Chance of Rain: 0.000000
-Day[0] UV: 6.000000
---------------------- DAY 2024-01-01 13:00 -------------------
-Day[1] Time: 2024-01-01 13:00
+Day[0] UV: 5.000000
+--------------------- DAY 2024-01-06 13:00 -------------------
+Day[1] Time: 2024-01-06 13:00
 Day[1] Condition: Sunny
 Day[1] is_day: 1
-Day[1] Wind: 4.000000
-Day[1] Humidity: 27.000000
+Day[1] Wind: 20.900000
+Day[1] Humidity: 38.000000
 Day[1] Heat Index: 24.600000
 Day[1] Chance of Rain: 0.000000
-Day[1] UV: 7.000000
---------------------- 2024-01-02 -------------------
-Date: 2024-01-02
-Condition: Clear
-Temperature: 21.600000
+Day[1] UV: 6.000000
+--------------------- 2024-01-07 -------------------
+Date: 2024-01-07
+Condition: Mist
+Temperature: 24.000000
+Max Temperature: 25.300000
+Min Temperature: 18.800000
+Avg Humidity: 35.000000
+Avg Temperature: 21.700000
+Chance of Rain: 0.000000
+UV: 4.000000
+Sunset: 05:58 PM
+Sunrise: 07:18 AM
+Moonrise: 03:03 AM
+Moonset: 02:05 PM
+--------------------- 2024-01-08 -------------------
+Date: 2024-01-08
+Condition: Mist
+Temperature: 24.000000
 Max Temperature: 24.800000
-Min Temperature: 19.500000
-Avg Humidity: 55.000000
-Avg Temperature: 21.900000
+Min Temperature: 18.900000
+Avg Humidity: 39.000000
+Avg Temperature: 21.600000
 Chance of Rain: 0.000000
-UV: 6.000000
-Sunset: 05:55 PM
-Sunrise: 07:17 AM
-Moonrise: 11:31 PM
-Moonset: 11:28 AM
---------------------- 2024-01-03 -------------------
-Date: 2024-01-03
-Condition: Clear
-Temperature: 21.600000
-Max Temperature: 25.500000
-Min Temperature: 19.900000
-Avg Humidity: 63.000000
-Avg Temperature: 22.300000
-Chance of Rain: 0.000000
-UV: 6.000000
-Sunset: 05:55 PM
-Sunrise: 07:17 AM
-Moonrise: No moonrise
-Moonset: 11:56 AM
+UV: 4.000000
+Sunset: 05:59 PM
+Sunrise: 07:18 AM
+Moonrise: 04:04 AM
+Moonset: 02:49 PM

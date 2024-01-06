@@ -75,40 +75,53 @@ void Analyze(Days* d)
     
 
     FILE* fptr = fopen("Anamoly.log", "w");
+    FILE *fptr2 = fopen("history.log", "a");
     
-    if(fptr != NULL)
+    if(fptr != NULL && fptr2 != NULL)
     {
         if ((int)temp_analysis > 40)
         {
-            fprintf(fptr, "Warning: Temperature Too High!!");
+            fprintf(fptr, "Warning: Temperature Too High!!\n");
+            fprintf(fptr2, "Warning: Temperature Too High!!\n");
         } else if ((int)temp_analysis < 10)
         {
-            fprintf(fptr, "Warning: Temperature Too Low!!");
+            fprintf(fptr, "Warning: Temperature Too Low!!\n");
+            fprintf(fptr2, "Warning: Temperature Too Low!!\n");
         }
 
         if ((int)humidity_analysis >= 65)
         {
-            fprintf(fptr, "Warning: High Moisture!!");
+            fprintf(fptr, "Warning: High Moisture!!\n");
+            fprintf(fptr2, "Warning: High Moisture!!\n");
         } else if ((int)humidity_analysis <= 55)
         {
-            fprintf(fptr, "Warning: Low Moisture!!");
+            fprintf(fptr, "Warning: Low Moisture!!\n");
+            fprintf(fptr2, "Warning: Low Moisture!!\n");
         }
         if ((int)UV_analysis >= 8)
         {
-            fprintf(fptr, "Warning: Avoid being outside during midday hours! Make sure you seek shade! Shirt, sunscreen and hat are a must!");
+            fprintf(fptr, "Warning: Avoid being outside during midday hours! Make sure you seek shade! Shirt, sunscreen and hat are a must!\n");
+            fprintf(fptr2, "Warning: Avoid being outside during midday hours! Make sure you seek shade! Shirt, sunscreen and hat are a must!\n");
         } 
         if (Rain_analysis >= 0.7 && Wind_analysis >= 93)
         {
-            fprintf(fptr, "Warning: Thunderstorm!!");
+            fprintf(fptr, "Warning: Thunderstorm!!\n");
+            fprintf(fptr2, "Warning: Thunderstorm!!\n");
         }
 
         if (Wind_analysis >= 93)
         {
-            fprintf(fptr, "Warning: Wind Gust!!");
+            fprintf(fptr, "Warning: Wind Gust!!\n");
+            fprintf(fptr2, "Warning: Wind Gust!!\n");
         }
 
     }
     fclose(fptr);
+    fclose(fptr2);
+    
+
+    
+    
     
     
     

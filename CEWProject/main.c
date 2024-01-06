@@ -1,8 +1,9 @@
 #include <stdio.h>
-#include "Functions/retrieval.c" 
-#include "Functions/read.c"
-#include "Functions/date_utils.c"
-#include "Functions/ip_utils.c"
+//#include "Functions/retrieval.c" 
+//#include "Functions/read.c"
+//#include "Functions/date_utils.c"
+//#include "Functions/ip_utils.c"
+#include "headers/weather.h"
 
 enum Locations {
     FIRST_LOCATION  = '1',
