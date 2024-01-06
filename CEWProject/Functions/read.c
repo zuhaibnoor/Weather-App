@@ -3,6 +3,7 @@
 #include "../headers/cJSON.h"
 #include <curl/curl.h>
 #include <string.h>
+#include <time.h>
 
 
 
@@ -72,6 +73,27 @@ void Analyze(Days* d)
     double Rain_analysis = average(avgRain); 
     double Wind_analysis = average(avgWind);
 
+    // Get the current time in seconds since the epoch
+    time_t currentTime = time(NULL);
+
+    // Check if the time retrieval was successful
+    if (currentTime == -1) {
+        perror("Unable to get time");
+        return;
+    }
+
+    // Convert the time to a structure representing the broken-down time
+    struct tm *localTimeInfo = localtime(&currentTime);
+
+    // Check if the conversion was successful
+    if (localTimeInfo == NULL) {
+        perror("Unable to convert time");
+        return;
+    }
+    
+    char *TIME = asctime(localTimeInfo);
+
+
     
 
     FILE* fptr = fopen("Anamoly.log", "w");
@@ -81,38 +103,50 @@ void Analyze(Days* d)
     {
         if ((int)temp_analysis > 40)
         {
-            fprintf(fptr, "Warning: Temperature Too High!!\n");
-            fprintf(fptr2, "Warning: Temperature Too High!!\n");
+            fprintf(fptr, "Warning: Temperature Too High!! %s",TIME);
+            fprintf(fptr2, "Warning: Temperature Too High!! %s",TIME);
         } else if ((int)temp_analysis < 10)
         {
-            fprintf(fptr, "Warning: Temperature Too Low!!\n");
-            fprintf(fptr2, "Warning: Temperature Too Low!!\n");
+            fprintf(fptr, "Warning: Temperature Too Low!! %s",TIME);
+            
+            fprintf(fptr2, "Warning: Temperature Too Low!! %s",TIME);
+            
         }
 
         if ((int)humidity_analysis >= 65)
         {
-            fprintf(fptr, "Warning: High Moisture!!\n");
-            fprintf(fptr2, "Warning: High Moisture!!\n");
+            fprintf(fptr, "Warning: High Moisture!! %s",TIME);
+            
+            fprintf(fptr2, "Warning: High Moisture!! %s",TIME);
+            
         } else if ((int)humidity_analysis <= 55)
         {
-            fprintf(fptr, "Warning: Low Moisture!!\n");
-            fprintf(fptr2, "Warning: Low Moisture!!\n");
+            fprintf(fptr, "Warning: Low Moisture!! %s",TIME);
+            
+            fprintf(fptr2, "Warning: Low Moisture!! %s",TIME);
+            
         }
         if ((int)UV_analysis >= 8)
         {
-            fprintf(fptr, "Warning: Avoid being outside during midday hours! Make sure you seek shade! Shirt, sunscreen and hat are a must!\n");
-            fprintf(fptr2, "Warning: Avoid being outside during midday hours! Make sure you seek shade! Shirt, sunscreen and hat are a must!\n");
+            fprintf(fptr, "Warning: Avoid being outside during midday hours! Make sure you seek shade! Shirt, sunscreen and hat are a must! %s",TIME);
+            
+            fprintf(fptr2, "Warning: Avoid being outside during midday hours! Make sure you seek shade! Shirt, sunscreen and hat are a must! %s",TIME);
+            
         } 
         if (Rain_analysis >= 0.7 && Wind_analysis >= 93)
         {
-            fprintf(fptr, "Warning: Thunderstorm!!\n");
-            fprintf(fptr2, "Warning: Thunderstorm!!\n");
+            fprintf(fptr, "Warning: Thunderstorm!! %s" ,TIME);
+            
+            fprintf(fptr2, "Warning: Thunderstorm!! %s",TIME);
+            
         }
 
         if (Wind_analysis >= 93)
         {
-            fprintf(fptr, "Warning: Wind Gust!!\n");
-            fprintf(fptr2, "Warning: Wind Gust!!\n");
+            fprintf(fptr, "Warning: Wind Gust!! %s",TIME);
+            
+            fprintf(fptr2, "Warning: Wind Gust!! %s",TIME);
+            
         }
 
     }
