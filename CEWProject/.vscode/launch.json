@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/admin/Desktop/CEWProject",
-      "program": "c:/Users/admin/Desktop/CEWProject/build/Debug/outDebug",
+      "cwd": "e:/CEW-OEL/CEWProject",
+      "program": "e:/CEW-OEL/CEWProject/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
