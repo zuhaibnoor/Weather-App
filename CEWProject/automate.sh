@@ -6,6 +6,7 @@ export DISPLAY=:0
 # Ensure autoscript.sh is executable
 chmod +x autoscript.sh
 
+echo "Script executed at $(date)" >> automate_track.log
 # Execute autoscript.sh with parameters
 ./autoscript.sh 1
 ./autoscript.sh 2
@@ -13,4 +14,3 @@ chmod +x autoscript.sh
 
 # Add this line to your automate.sh script
 #/home/owais/Desktop/CEW-OEL/automate.sh 1 >> /home/owais/Desktop/CEW-OEL/automate.log 2>&1
-notify-send "Automation Script" "Execution of automate.sh script completed successfully"
