@@ -231,6 +231,28 @@ int Analyze(Days* d)
 // }
 
 void writeTxt(Days *d) {
+
+    // Get the current time in seconds since the epoch
+    time_t currentTime = time(NULL);
+
+    // Check if the time retrieval was successful
+    if (currentTime == -1) {
+        perror("Unable to get time");
+        exit(-1);
+    }
+
+    // Convert the time to a structure representing the broken-down time
+    struct tm *localTimeInfo = localtime(&currentTime);
+
+    // Check if the conversion was successful
+    if (localTimeInfo == NULL) {
+        perror("Unable to convert time");
+        exit(-1);
+    }
+    
+    char *TIME = asctime(localTimeInfo);
+
+
     FILE *fptr = fopen("display.txt", "w");
     if (fptr == NULL) {
         perror("Error opening file for writing");
@@ -239,6 +261,7 @@ void writeTxt(Days *d) {
 
     Days day = d[0];
     Days_Forecast *dd = day.Day;
+    fprintf(fptr, "Time: %s", TIME);
      fprintf(fptr, "--------------------- %s -------------------\n", day.date);
     fprintf(fptr, "City: %s\n", day.city);
         fprintf(fptr, "Country: %s\n",day.country);
@@ -505,5 +528,6 @@ int Read() {
     free(d);
     return res;
 }
+
 
 
