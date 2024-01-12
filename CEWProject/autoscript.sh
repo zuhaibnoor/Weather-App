@@ -3,12 +3,12 @@
 # Set the working directory
 cd /home/owais/Desktop/CEW-OEL
 
-# Compile the C program
+# Compile the C program using the following terminal command
 gcc headers/cJSON.c Functions/read.c Functions/retrieval.c Functions/date_utils.c test.c -o run -lcurl
 
 # Check if compilation was successful
 if [ $? -eq 0 ]; then
-    echo "Weather app compiled successfully"
+    echo "Weather app has been compiled successfully"
 else
     echo "Weather app compilation failed"
     exit 1
@@ -24,7 +24,7 @@ while fuser ./run &>/dev/null; do
 done
 
 echo "Choice $choice"
-echo "Weather app executing successfully"
+echo "Weather app has started successfully"
 
 case $choice in
     1)
@@ -52,4 +52,4 @@ case $choice in
         ;;
 esac
 
-echo "Weather app executed successfully"
+echo "Weather app Exited successfully"
