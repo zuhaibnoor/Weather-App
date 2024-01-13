@@ -4,7 +4,7 @@
 cd /home/owais/Desktop/CEW-OEL
 
 # Compile the C program using the following terminal command
-gcc headers/cJSON.c Functions/read.c Functions/retrieval.c Functions/date_utils.c test.c -o run -lcurl
+gcc headers/cJSON.c Functions/read.c Functions/retrieval.c Functions/date_utils.c auto.c -o run -lcurl
 
 # Check if compilation was successful
 if [ $? -eq 0 ]; then

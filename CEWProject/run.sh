@@ -1,6 +1,6 @@
 #!/bin/bash
 
-gcc headers/cJSON.c Functions/read.c Functions/retrieval.c Functions/date_utils.c test.c -o run -lcurl
+gcc headers/cJSON.c Functions/read.c Functions/retrieval.c Functions/date_utils.c auto.c -o run -lcurl
 
 while true; do
     echo "1. DATA RETRIEVAL"
